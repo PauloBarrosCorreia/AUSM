@@ -15,15 +15,12 @@ subroutine update()
      u3 (i) = u3 (i) - lambda * ( f3 (i) - f3 (i-1) )
      
      u (i) = u2 (i) / u1 (i)
-!     p (i) = (gamma -1.)  / gamma * ( u3 (i) - 0.5 * u2 (i) * u2 (i) / u1 (i) )  ! considering ht
-
-     p (i) = (gamma-1.) * ( u3 (i) - 0.5 * u2 (i) * u2 (i) / u1 (i) )
-     
+     p (i) = (gamma-1.) * ( u3 (i) - 0.5 * u2 (i) * u2 (i) / u1 (i) ) 
      a (i) = sqrt( gamma * p (i) / u1 (i) )
 
   end do
 
-  ! update values at the ghost cells - (not in the original) -------------------
+  ! update values at the ghost cells
 
   u1 (0) = u1 (1)
   u2 (0) = u2 (1)

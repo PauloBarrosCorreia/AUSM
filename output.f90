@@ -9,7 +9,7 @@ subroutine output()
   integer :: i
   integer, parameter :: out_unit = 10
   
-  open( unit=out_unit, file='tmp', status='unknown')
+  open( unit=out_unit, file='solution.dat', status='unknown')
 
   do i = 1, ncells+1
 

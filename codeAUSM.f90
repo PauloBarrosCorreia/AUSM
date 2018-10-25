@@ -11,7 +11,7 @@ program codeAUSM
 
   call initialization()
 
-  do i = 1,  niter ! iteration in time
+  do i = 1,  niter
      call ausm()
      call update()
   end do
